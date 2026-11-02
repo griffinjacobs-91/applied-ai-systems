@@ -1,0 +1,17 @@
+{
+  "name": "applied-ai-systems",
+  "private": true,
+  "type": "module",
+  "description": "Production AI systems pulled from private repos, with their real tests.",
+  "engines": {
+    "node": ">=22.6"
+  },
+  "scripts": {
+    "test": "node --experimental-strip-types --test \"**/test/*.test.mjs\" \"**/test/*.test.ts\" \"**/test/*.test.cjs\" \"tenfold/backtest/*.test.ts\" legwork/scripts/check-route-auth-test.mjs legwork/scripts/check-hook-order-test.mjs toolbox-shield/credential-health/credential-health-probe-test.mjs",
+    "test:praxis": "node --experimental-strip-types --test \"praxis/**/test/*.test.mjs\"",
+    "test:shield": "node --experimental-strip-types --test toolbox-shield/test/*.test.mjs toolbox-shield/skill-audit/test/*.test.mjs toolbox-shield/credential-health/credential-health-probe-test.mjs",
+    "test:systems-go": "node --test \"systems-go/test/*.test.cjs\"",
+    "test:tenfold": "node --experimental-strip-types --test \"tenfold/**/*.test.ts\"",
+    "test:legwork": "node --test legwork/scripts/check-route-auth-test.mjs legwork/scripts/check-hook-order-test.mjs"
+  }
+}
